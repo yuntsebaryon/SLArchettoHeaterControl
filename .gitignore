@@ -1,0 +1,6 @@
+.DS_Store
+*-backups
+fp-info-cache
+fp-lib-table
+*-cache.lib
+*.sch-bak
