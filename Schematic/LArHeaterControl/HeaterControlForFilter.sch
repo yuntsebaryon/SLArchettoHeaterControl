@@ -1,0 +1,300 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	9500 5200 10500 5200
+Wire Wire Line
+	1450 3000 1450 4250
+Wire Wire Line
+	10500 5200 10500 5950
+$Comp
+L Device:LED D0
+U 1 1 60D3A87C
+P 3950 4200
+F 0 "D0" V 3989 4082 50  0000 R CNN
+F 1 "LED" V 3898 4082 50  0000 R CNN
+F 2 "" H 3950 4200 50  0001 C CNN
+F 3 "~" H 3950 4200 50  0001 C CNN
+	1    3950 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3950 4050 3950 3100
+Wire Wire Line
+	3950 4350 3950 5950
+Wire Wire Line
+	1450 5950 3950 5950
+Wire Wire Line
+	1450 4450 1450 4650
+Connection ~ 1450 4650
+Wire Wire Line
+	1450 4650 1450 5950
+$Comp
+L Connector:Conn_WallPlug_Earth P0
+U 1 1 60D5CCAF
+P 1150 4350
+F 0 "P0" H 1217 4675 50  0000 C CNN
+F 1 "Conn_WallPlug_Earth" H 1217 4584 50  0000 C CNN
+F 2 "" H 1550 4350 50  0001 C CNN
+F 3 "~" H 1550 4350 50  0001 C CNN
+	1    1150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW0
+U 1 1 60D37B27
+P 3050 3000
+F 0 "SW0" H 3050 3285 50  0000 C CNN
+F 1 "SW_SPDT" H 3050 3194 50  0000 C CNN
+F 2 "" H 3050 3000 50  0001 C CNN
+F 3 "~" H 3050 3000 50  0001 C CNN
+	1    3050 3000
+	1    0    0    -1  
+$EndComp
+Text Notes 7400 7500 0    50   ~ 0
+Filter Heater Control Circuit
+Text Notes 8150 7650 0    50   ~ 0
+2/27/2022
+$Comp
+L Device:Fuse F0
+U 1 1 60D1AD78
+P 2200 3000
+F 0 "F0" V 2003 3000 50  0000 C CNN
+F 1 "Fuse" V 2094 3000 50  0000 C CNN
+F 2 "" V 2130 3000 50  0001 C CNN
+F 3 "250VAC/10A" V 2318 3000 50  0000 C CNN
+F 4 "I" H 2200 3000 50  0001 C CNN "Spice_Primitive"
+F 5 "ac 250" H 2200 3000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2200 3000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2200 3000
+	0    1    1    0   
+$EndComp
+Connection ~ 3950 5950
+Wire Wire Line
+	3950 5950 10500 5950
+Wire Wire Line
+	2350 3000 2850 3000
+Wire Wire Line
+	1450 3000 2050 3000
+Text Notes 7400 7250 0    50   ~ 0
+LAr Filter Heater Control
+Text Notes 10600 7650 0    50   ~ 0
+1
+Connection ~ 3950 3100
+$Comp
+L Relay:RAYEX-L90 K1
+U 1 1 60D238E6
+P 6700 2900
+F 0 "K1" V 6133 2900 50  0000 C CNN
+F 1 "Finder 46.61.9.024.0040" V 6224 2900 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_RAYEX-L90" H 7150 2850 50  0001 L CNN
+F 3 "https://a3.sofastcdn.com/attachment/7jioKBjnRiiSrjrjknRiwS77gwbf3zmp/L90-SERIES.pdf" H 7050 3900 50  0001 L CNN
+	1    6700 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7550 4700 7550 2700
+Connection ~ 7550 2700
+$Comp
+L Device:Fuse F4
+U 1 1 60FB2F5D
+P 8400 5200
+F 0 "F4" V 8203 5200 50  0000 C CNN
+F 1 "Thermal Switch" V 8294 5200 50  0000 C CNN
+F 2 "" V 8330 5200 50  0001 C CNN
+F 3 "250VAC/10A/230C" V 8500 5200 50  0000 C CNN
+	1    8400 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F1
+U 1 1 60D28701
+P 5200 3100
+F 0 "F1" V 5003 3100 50  0000 C CNN
+F 1 "Fuse" V 5094 3100 50  0000 C CNN
+F 2 "" V 5130 3100 50  0001 C CNN
+F 3 "125VAC/15A" V 5318 3100 50  0000 C CNN
+	1    5200 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 3100 6300 3100
+Wire Wire Line
+	4450 3100 5050 3100
+Connection ~ 4450 3100
+Wire Wire Line
+	7150 4700 7550 4700
+Wire Wire Line
+	5650 4700 6350 4700
+Wire Wire Line
+	5650 1700 5650 4700
+Wire Wire Line
+	7550 2700 7550 2300
+Wire Wire Line
+	7100 2700 7550 2700
+Wire Wire Line
+	6000 2700 6300 2700
+Wire Wire Line
+	6000 1700 6000 2700
+Wire Wire Line
+	4450 5100 5050 5100
+Wire Wire Line
+	4450 3100 4450 5100
+Wire Wire Line
+	5350 5100 6350 5100
+Wire Wire Line
+	7550 1700 7550 2200
+Text Notes 5900 1600 0    50   ~ 0
+DO2
+Text Notes 5550 1600 0    50   ~ 0
+DO3
+Text Notes 6300 1350 0    79   ~ 0
+ADAM 6050
+Wire Notes Line
+	5300 850  7750 850 
+Wire Notes Line
+	5300 1700 5300 850 
+$Comp
+L Device:Fuse F2
+U 1 1 60D29448
+P 5200 5100
+F 0 "F2" V 5003 5100 50  0000 C CNN
+F 1 "Fuse" V 5094 5100 50  0000 C CNN
+F 2 "" V 5130 5100 50  0001 C CNN
+F 3 "125VAC/15A" V 5318 5100 50  0000 C CNN
+	1    5200 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Relay:RAYEX-L90 K2
+U 1 1 60D25FFD
+P 6750 4900
+F 0 "K2" V 6183 4900 50  0000 C CNN
+F 1 "Finder 46.61.9.024.0040" V 6274 4900 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_RAYEX-L90" H 7200 4850 50  0001 L CNN
+F 3 "https://a3.sofastcdn.com/attachment/7jioKBjnRiiSrjrjknRiwS77gwbf3zmp/L90-SERIES.pdf" H 7100 5900 50  0001 L CNN
+	1    6750 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 3100 4450 3100
+Wire Wire Line
+	3550 3100 3950 3100
+Wire Wire Line
+	3250 3100 3950 3100
+Wire Wire Line
+	7150 5200 8250 5200
+Wire Notes Line
+	800  6150 7750 6150
+Wire Notes Line
+	800  1900 800  6150
+Text Notes 1100 2250 0    79   ~ 0
+Electrical Box
+$Comp
+L Device:Heater R2
+U 1 1 60D398B9
+P 9350 5200
+F 0 "R2" V 9143 5200 50  0000 C CNN
+F 1 "Heater" V 9234 5200 50  0000 C CNN
+F 2 "" V 9280 5200 50  0001 C CNN
+F 3 "120V/288W" V 9468 5200 50  0000 C CNN
+	1    9350 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8550 5200 9200 5200
+Connection ~ 10500 5200
+Wire Wire Line
+	9500 3200 10500 3200
+Wire Wire Line
+	8500 3200 9200 3200
+Wire Notes Line
+	7750 1900 800  1900
+Wire Notes Line
+	7750 6150 7750 1900
+Wire Wire Line
+	7100 3200 8200 3200
+Wire Notes Line
+	7750 1700 5300 1700
+Text Notes 7500 1600 0    50   ~ 0
+GND
+$Comp
+L power:+24V #PWR?
+U 1 1 60D9DED7
+P 7550 2300
+F 0 "#PWR?" H 7550 2150 50  0001 C CNN
+F 1 "+24V" H 7565 2473 50  0000 C CNN
+F 2 "" H 7550 2300 50  0001 C CNN
+F 3 "" H 7550 2300 50  0001 C CNN
+	1    7550 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F3
+U 1 1 60FB15F4
+P 8350 3200
+F 0 "F3" V 8153 3200 50  0000 C CNN
+F 1 "Thermal Switch" V 8244 3200 50  0000 C CNN
+F 2 "" V 8280 3200 50  0001 C CNN
+F 3 "250VAC/10A/230C" V 8450 3200 50  0000 C CNN
+	1    8350 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Heater R12
+U 1 1 60D38C69
+P 9350 3200
+F 0 "R12" V 9143 3200 50  0000 C CNN
+F 1 "Heater" V 9234 3200 50  0000 C CNN
+F 2 "" V 9280 3200 50  0001 C CNN
+F 3 "120V/520W" V 9468 3200 50  0000 C CNN
+	1    9350 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10500 3200 10500 5200
+Wire Notes Line
+	7750 850  7750 1700
+$Comp
+L power:+24V #PWR?
+U 1 1 62217B98
+P 8100 1000
+F 0 "#PWR?" H 8100 850 50  0001 C CNN
+F 1 "+24V" V 8115 1128 50  0000 L CNN
+F 2 "" H 8100 1000 50  0001 C CNN
+F 3 "" H 8100 1000 50  0001 C CNN
+	1    8100 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 1000 7750 1000
+$Comp
+L power:GNDREF #PWR?
+U 1 1 6221DDC4
+P 8000 1250
+F 0 "#PWR?" H 8000 1000 50  0001 C CNN
+F 1 "GNDREF" V 8005 1122 50  0000 R CNN
+F 2 "" H 8000 1250 50  0001 C CNN
+F 3 "" H 8000 1250 50  0001 C CNN
+	1    8000 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 1250 7750 1250
+Text Notes 7550 1050 0    50   ~ 0
+V+
+Text Notes 7500 1300 0    50   ~ 0
+GND
+$EndSCHEMATC
