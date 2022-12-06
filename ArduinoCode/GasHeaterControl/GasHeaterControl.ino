@@ -35,6 +35,8 @@ void setup() {
     default: Serial.println("Unknown"); break;
   }
 
+  pinMode(heater, OUTPUT);
+
 }
 
 void loop() {
