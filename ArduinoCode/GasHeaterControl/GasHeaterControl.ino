@@ -64,9 +64,9 @@ void loop() {
   }
 
   if ( TCTemp > 40 ) {
-    digitalWrite(heater, HIGH);
-  } else {
     digitalWrite(heater, LOW);
+  } else {
+    digitalWrite(heater, HIGH);
   }
 
   delay(1000);
