@@ -32,7 +32,7 @@ Adafruit_MAX31856 maxthermo = Adafruit_MAX31856(13, 12, 11, 10);
 // Relay for the heater power circuit
 const int heater = 8;
 
-float switchTemp = 40;
+float switchTemp = 30;
 uint8_t relayStatus = 0;
 
 void setup() {
